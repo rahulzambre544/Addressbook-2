@@ -1,0 +1,18 @@
+---
+- hosts: docker-deploy
+  - name: Install Docker
+    package:
+      name: docker-ce
+      state: present
+  - name: Start Docker service
+    service:
+      name: docker
+      state: started
+  - name: create a container
+    docker_container:
+      name: addressbook
+      image: haneef7/addressbook:latest
+      state: started
+      recreate: yes
+      exposed_ports:
+        - 8080
