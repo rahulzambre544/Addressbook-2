@@ -1,5 +1,6 @@
 ---
 - hosts: docker-deploy
+  tasks:
   - name: Install Docker
     package:
       name: docker-ce
