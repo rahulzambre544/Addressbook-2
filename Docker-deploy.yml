@@ -3,7 +3,7 @@
   tasks:
   - name: Install Docker
     package:
-      name: docker-ce
+      name: docker
       state: present
   - name: Start Docker service
     service:
