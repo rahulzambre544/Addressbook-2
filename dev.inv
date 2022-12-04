@@ -1,0 +1,2 @@
+[docker-deploy]
+172.31.44.8 ansible_user=ec2-user
