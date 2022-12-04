@@ -10,10 +10,4 @@
       name: docker
       state: started
   - name: create a container
-    docker_container:
-      name: addressbook
-      image: haneef7/addressbook:latest
-      state: started
-      recreate: yes
-      exposed_ports:
-        - 8080
+    command: docker run -itd --name addressbook -p 8080:8080 haneef7/addressbook
