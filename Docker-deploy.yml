@@ -1,5 +1,6 @@
 ---
 - hosts: docker-deploy
+  become: true
   tasks:
   - name: Install Docker
     package:
